@@ -29,3 +29,10 @@ document.addEventListener("keydown", function (e) {
     closeModal();
   }
 });
+
+const button = document.querySelector(".btn--scroll-to");
+const section = document.querySelector(".section");
+button.addEventListener("click", function (e) {
+  const gotos = section.getBoundingClientRect();
+  section.scrollIntoView({ behavior: "smooth" });
+});
